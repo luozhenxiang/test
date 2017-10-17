@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JSON</title>
+</head>
+<body>
+<div id="demo"></div>
+<div id="demo1"></div>
+	<script type="text/javascript">
+		var js = '{"sites":['+
+						'{"name":"luo", "url":"www.luo.com"},'+
+						'{"name":"zhen", "url":"www.zhen.com"},'+
+						'{"name":"xiang", "url":"www.xiang.com"} ]}';
+		var parse = JSON.parse(js);
+		var stringify = JSON.stringify(parse,null,10);
+		// console.log(parse);
+		document.getElementById("demo").innerHTML = parse.sites[1].name + "" +parse.sites[1].url; 
+		document.getElementById("demo1").innerHTML = stringify;
+
+
+
+	</script>
+</body>
+</html>
